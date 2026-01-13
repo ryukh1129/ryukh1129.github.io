@@ -121,3 +121,51 @@
 				});
 
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. 요소 선택
+    const modal = document.getElementById("project-modal");
+    const modalImg = document.getElementById("modal-img");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDesc = document.getElementById("modal-desc");
+    const modalLink = document.getElementById("modal-link");
+    const closeBtn = document.querySelector(".close-btn");
+    
+    // 모든 프로젝트 카드 선택
+    const projectCards = document.querySelectorAll(".project-item");
+
+    // 2. 각 카드에 클릭 이벤트 추가
+    projectCards.forEach(card => {
+        card.addEventListener("click", function() {
+            // 클릭된 카드의 data 속성값 가져오기
+            const title = this.getAttribute("data-title");
+            const desc = this.getAttribute("data-desc");
+            const link = this.getAttribute("data-link");
+            const imgSrc = this.getAttribute("data-img");
+
+            // 모달창에 내용 채워넣기
+            if (modalTitle) modalTitle.textContent = title;
+            if (modalDesc) modalDesc.textContent = desc;
+            if (modalLink) modalLink.href = link;
+            if (modalImg) modalImg.src = imgSrc;
+
+            // 모달창 보여주기 (Flex로 설정하여 중앙 정렬 유지)
+            if (modal) modal.style.display = "flex";
+        });
+    });
+
+    // 3. 닫기 버튼(X) 클릭 시 모달 닫기
+    if (closeBtn) {
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+    }
+
+    // 4. 모달 바깥 영역(검은 배경) 클릭 시 닫기
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
