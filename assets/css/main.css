@@ -2824,7 +2824,7 @@ input, select, textarea {
     .tag {
         padding: 8px 16px;
         border-radius: 50px;
-        font-size: 0.9em;
+        font-size: 0.7em;
         font-weight: 600;
         color: #444;
         background-color: #f3f4f6;
@@ -2837,7 +2837,7 @@ input, select, textarea {
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
 
-    .tag.java, .tag.python, .tag.c {
+    .tag.lan {
         background-color: #e0f2fe;
         color: #0369a1;
     }
