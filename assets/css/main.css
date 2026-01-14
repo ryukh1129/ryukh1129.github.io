@@ -3108,3 +3108,17 @@ input, select, textarea {
     .project-item {
         cursor: pointer; 
     }
+
+	/* 사이드바 하단 아이콘 밝게 수정 */
+    #header .icons a {
+        color: #ffffff !important; /* 회색조를 완전 흰색으로 변경 */
+        opacity: 1 !important;     /* 흐릿한 투명도 제거 (선명하게) */
+        font-size: 1.3em;          /* 크기도 약간 키워서 더 잘 보이게 (선택사항) */
+    }
+
+    /* 마우스 올렸을 때 반짝이는 효과 추가 */
+    #header .icons a:hover {
+        color: #64a5ff !important; /* 마우스 올리면 밝은 파란색으로 변함 */
+        text-shadow: 0 0 10px rgba(100, 165, 255, 0.8); /* 빛나는 효과 */
+        transform: scale(1.2);     /* 살짝 커지는 애니메이션 */
+    }
