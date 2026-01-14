@@ -1944,7 +1944,8 @@ input, select, textarea {
 	.button {
 		position: relative;
 		display: inline-block;
-		border-radius: 0.35em;
+		border-radius: 0.7em;
+		font-weight: bold;
 		color: #fff !important;
 		text-decoration: none;
 		padding: 0.75em 2.5em 0.75em 2.5em;
@@ -2247,8 +2248,11 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+    			background-color: #81918E;
+    			background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../../images/intro.png");
+    			background-size: cover;
+    			background-position: center;
+    			background-repeat: no-repeat;
 			}
 
 			#main > section.two {
